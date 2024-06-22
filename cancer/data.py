@@ -18,9 +18,9 @@ def app():
     if 'data' not in st.session_state:
         st.session_state.data = {
             'skanda': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse']),
-            'deekhsith': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse']),
-            'sanjana_wg': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse']),
-            'sanjana_bj': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse'])
+            'deek': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse']),
+            'sanjana': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse']),
+            'shreyashri': pd.DataFrame(columns=['Time', 'Temperature', 'Pulse'])
         }
         st.session_state.prev_temp = 37.0
         st.session_state.prev_pulse = 70
@@ -83,9 +83,9 @@ def app():
 
     # Patient info
     patient_info = {
-        'deek': {'Name': 'Deek', 'Gender': 'Male', 'Cancer Type': 'Kidney', 'Headache': False},
-        'sanjana': {'Name': 'Sanjana W G', 'Gender': 'Female', 'Cancer Type': 'Breast', 'Headache': False},
-        'sanjana_bj': {'Name': 'Shreyashri', 'Age': 34, 'Gender': 'Female', 'Cancer Type': 'Liver'},
+        'deek': {'Name': 'Deek', 'Age': 70, 'Gender': 'Male', 'Cancer Type': 'Kidney'},
+        'sanjana': {'Name': 'Sanjana', 'Age': 21, 'Gender': 'Female', 'Cancer Type': 'Breast', 'Headache': False},
+        'shreyashri': {'Name': 'Shreyashri', 'Age': 34, 'Gender': 'Female', 'Cancer Type': 'Liver'},
         'skanda': {'Name': 'Skanda', 'Age': 45, 'Gender': 'Male', 'Cancer Type': 'Lung'}
     }
 
@@ -94,13 +94,13 @@ def app():
 
     users = {
         'skanda': 'Skanda',
-        'deekhsith': 'Deek',
-        'sanjana_wg': 'Sanjana',
-        'sanjana_bj': 'Sanjana BJ'
+        'deek': 'Deek',
+        'sanjana': 'Sanjana WG',
+        'shreyashri': 'Shreyashri'
     }
 
     with col1:
-        for user in ['skanda', 'deekhsith']:
+        for user in ['skanda', 'deek']:
             with st.form(key=user):
                 st.write(f"Session for patient - {users[user]}")
                 col8, col9 , col7 = st.columns([0.5,1,0.5])
@@ -121,7 +121,7 @@ def app():
                     st.session_state.prev_pulse = 70
 
     with col2:
-        for user in ['sanjana_wg', 'sanjana_bj']:
+        for user in ['sanjana', 'shreyashri']:
             with st.form(key=user):
                 st.write(f"Session for patient - {users[user]}")
                 col4, col5 , col6 = st.columns([0.5,1,0.5])
