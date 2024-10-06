@@ -9,7 +9,7 @@ To revolutionize scalp cooling therapy in India with a comprehensive, patient-ce
 
 ## Result - We emerged as IOT track Winners🏆
 
-<p>Check out  YouTube vlog to see the highlights from the SheCodes hackathon: <a href="https://youtu.be/Q9ccHR-d8no?si=3OTtAHUhmTtc9d7w" target="_blank">Watch the Video</a>.</p>
+<p>Check out  YouTube Vlog to see the highlights from the SheCodes hackathon: <a href="https://youtu.be/Q9ccHR-d8no?si=3OTtAHUhmTtc9d7w" target="_blank">Watch the Video</a>.</p>
 
 
 
